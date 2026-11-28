@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg-canvas: #0E131D;
+  --bg-sidebar: #111723;
+  --bg-surface: #151C2A;
+  --bg-surface-elevated: #1C2536;
+  --border-subtle: #263248;
+  --border-strong: #334361;
+  --text-primary: #E6ECF5;
+  --text-secondary: #98A6BD;
+  --text-muted: #6C7B95;
+  --accent: #2563EB;
+  --accent-hover: #3B82F6;
+  --accent-link-hover: #60A5FA;
+  --status-ok: #16A34A;
+  --status-ok-text: #22C55E;
+  --status-warn: #D97706;
+  --status-warn-text: #F59E0B;
+  --status-danger: #B84A52;
+  --status-danger-text: #D96B70;
+  --chart-rdp: #5B8DEF;
+  --chart-smb: #34B3A0;
+  --chart-ftp: #D69E54;
+  --chart-blocked: #D9777C;
+  --chart-cursor: rgba(91, 141, 239, 0.08);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-canvas: #F1F5F9;
+  --bg-sidebar: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #E8EEF6;
+  --border-subtle: #D5DFEC;
+  --border-strong: #B6C5D9;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-link-hover: #1E40AF;
+  --status-ok: #16A34A;
+  --status-ok-text: #15803D;
+  --status-warn: #D97706;
+  --status-warn-text: #B45309;
+  --status-danger: #DC2626;
+  --status-danger-text: #B91C1C;
+  --chart-rdp: #2563EB;
+  --chart-smb: #0D9488;
+  --chart-ftp: #D97706;
+  --chart-blocked: #DC2626;
+  --chart-cursor: rgba(37, 99, 235, 0.08);
+}
+
+@theme inline {
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas: var(--bg-canvas);
+  --color-sidebar: var(--bg-sidebar);
+  --color-surface: var(--bg-surface);
+  --color-surface-elevated: var(--bg-surface-elevated);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-link-hover: var(--accent-link-hover);
+  --color-ok: var(--status-ok);
+  --color-ok-text: var(--status-ok-text);
+  --color-warn: var(--status-warn);
+  --color-warn-text: var(--status-warn-text);
+  --color-danger: var(--status-danger);
+  --color-danger-text: var(--status-danger-text);
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    letter-spacing: 0.005em;
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--accent-hover);
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.recharts-wrapper *:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ServerPro Defender",
+  "description": "Понятная консоль защиты Windows (7 / Server 2008 R2 и новее) от подбора паролей к RDP, FTP и SMB с GeoIP-блокировками, управлением службой, брандмауэром и сборкой установочного дистрибутива.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
